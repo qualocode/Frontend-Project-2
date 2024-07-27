@@ -1,0 +1,682 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --color-1: #040307;
+  --color-2: #ffffff;
+  --font-1: "Playfair Display", serif;
+  --font-2: "Raleway", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-1);
+  color: var(--color-2);
+  background-color: var(--color-1);
+}
+
+/* ------------------------------- */
+/*---------- N A V B A R ----------*/
+/* ------------------------------- */
+
+.navbar {
+  padding: 1rem 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo-title {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.navbar i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.navbar .menu {
+  width: 16rem;
+  height: 100%;
+  padding: 4rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  backdrop-filter: blur(20px);
+  transform: translateX(-100%);
+  transition: 0.4s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.808);
+}
+
+.navbar .menu.active {
+  transform: translateX(0);
+}
+
+.menu i {
+  font-size: 2rem;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+.menu ul li {
+  padding: 16px 24px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.menu ul li:hover {
+  background-color: rgb(53, 53, 53);
+}
+
+.menu ul li a {
+  font-family: var(--font-2);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-2);
+}
+
+.navbar .layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  z-index: 1;
+  background-color: rgb(0, 0, 0);
+  display: none;
+}
+
+.layer.active {
+  display: block;
+}
+
+/* --------------------------- */
+/*-------- H E A D E R --------*/
+/* --------------------------- */
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: no-repeat center/100% url(/images/Untitled1min.jpg);
+  background-size: cover;
+}
+
+.header .head-content {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 6%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.header .head-content h1 {
+  width: 720px;
+  font-size: 4.6rem;
+  line-height: 1.2;
+}
+
+.header .head-content p {
+  width: 710px;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  font-family: var(--font-2);
+}
+
+.header .head-content .btn {
+  margin-top: 6px;
+  padding: 0.9rem 2.1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: var(--font-2);
+  letter-spacing: 2px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.header .head-content .btn:hover {
+  background-color: rgb(212, 212, 212);
+}
+
+/* --------------------------- */
+/*---------- M A I N ----------*/
+/* --------------------------- */
+
+.main {
+  width: 100%;
+  padding-bottom: 6%;
+}
+
+/*----- Section # 1 -----*/
+
+.main .sct-one {
+  width: 100%;
+  padding: 5rem 6% 2rem;
+  margin-bottom: 40px;
+}
+
+.sct-one .sct-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sct-one .sct-head h2 {
+  width: fit-content;
+  font-size: 2.6rem;
+  white-space: nowrap;
+}
+
+.sct-one .sct-head p {
+  width: 600px;
+  margin: 12px 0;
+  font-family: var(--font-2);
+  line-height: 1.6;
+}
+
+.sct-one .sct-gallery {
+  width: 100%;
+  margin-top: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.sct-one .sct-gallery .cards {
+  width: calc(100% / 3);
+  height: 500px;
+  position: relative;
+  background-color: lightseagreen;
+}
+
+.sct-gallery .cards img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sct-gallery .cards .card-layer {
+  width: 100%;
+  height: 100%;
+  padding: 0 4% 2rem;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.479);
+}
+
+.cards .card-layer h3 {
+  height: 200px;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+/*----- Section # 2 -----*/
+
+.sct-two {
+  width: 100%;
+  height: 100vh;
+  background: no-repeat center/100% url(/images/min.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.sct-two .sct2-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.459);
+}
+
+.sct-two .sect2-content {
+  width: 100%;
+  margin-bottom: 4rem;
+  text-align: center;
+  height: fit-content;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sct-two .sect2-content h2 {
+  width: 680px;
+  margin: auto;
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+}
+
+.sct-two .sect2-content p {
+  width: 680px;
+  margin: auto;
+  line-height: 1.5;
+  font-family: var(--font-2);
+}
+
+/*----- Section # 3 -----*/
+
+.sct-three {
+  width: 100%;
+  height: 60vh;
+  margin-top: 7%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.sct-three h2 {
+  width: 760px;
+  font-size: 2.8rem;
+}
+
+.sct-three p {
+  width: 770px;
+  font-size: 1rem;
+}
+
+/*----- Section # 4 -----*/
+
+.sct-four {
+  width: 100%;
+  margin-top: 6%;
+}
+
+.sct-four .imgGal1 {
+  width: 100%;
+  height: 80vh;
+}
+
+.sct-four .imgGal1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sct-four .imgGal2 {
+  width: 100%;
+  padding: 6% 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.sct-four .imgGal2 .imgCards {
+  width: 540px;
+  height: 400px;
+}
+
+.imgGal2 .imgCards img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*----- Section # 5 -----*/
+
+.sct-five {
+  width: 100%;
+}
+
+.sct-five .sct5-content h2 {
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.sct-five .sct5-content p {
+  width: 800px;
+  font-size: 0.9rem;
+  margin: auto;
+  text-align: center;
+  font-family: var(--font-2);
+  line-height: 1.8;
+}
+
+.sct-five .sct5-gallery {
+  width: 100%;
+  padding: 0 8%;
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.sct5-gallery .cards img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ----------------------------- */
+/*--------- F O O T E R ---------*/
+/* ----------------------------- */
+
+.footer {
+  width: 100%;
+  padding: 4rem 4rem 6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+  position: relative;
+}
+
+.footer .boxes {
+  margin-right: 20%;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.footer .boxes h3 {
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.footer .copyright {
+  position: absolute;
+  bottom: 10px;
+}
+
+.footer .copyright p {
+  padding: 10px 0;
+}
+
+.footer .copyright span {
+  color: rgb(255, 55, 55);
+  font-weight: 800;
+}
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/*----------- R E S P O N S I V E N E S S -----------*/
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+@media (max-width: 1080px) {
+  /*------- M A I N -------*/
+
+  /*--- Section # 1 ---*/
+  .sct-one .sct-gallery .cards {
+    height: 400px;
+  }
+
+  .cards .card-layer h3 {
+    height: 160px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 880px) {
+  /*-------- H E A D E R --------*/
+  .header .head-content h1 {
+    width: 560px;
+    font-size: 3.6rem;
+  }
+
+  .header .head-content p {
+    width: 550px;
+    font-size: 1.1rem;
+  }
+
+  /*------- M A I N -------*/
+
+  /*--- Section # 1 ---*/
+
+  .sct-one .sct-gallery .cards {
+    height: 350px;
+  }
+
+  .cards .card-layer h3 {
+    height: 120px;
+    font-size: 1.1rem;
+  }
+
+  /*--- Section # 3 ---*/
+
+  .sct-three {
+    gap: 15px;
+  }
+
+  .sct-three h2 {
+    width: 460px;
+    font-size: 2rem;
+  }
+
+  .sct-three p {
+    width: 470px;
+    font-size: 0.9rem;
+  }
+
+  /*--- Section # 4 ---*/
+
+  .sct-four .imgGal2 .imgCards {
+    height: 300px;
+  }
+
+  /*--- Section # 5 ---*/
+
+  .sct-five .sct5-content h2 {
+    font-size: 2rem;
+  }
+
+  .sct-five .sct5-content p {
+    width: 600px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 680px) {
+  /*-------- H E A D E R --------*/
+  .header .head-content h1 {
+    width: 420px;
+    font-size: 2.6rem;
+  }
+
+  .header .head-content p {
+    width: 400px;
+    font-size: 0.9rem;
+  }
+
+  .header .head-content .btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.9rem;
+  }
+
+  /*------- M A I N -------*/
+
+  /*--- Section # 1 ---*/
+
+  .sct-one .sct-head h2 {
+    font-size: 2rem;
+  }
+
+  .sct-one .sct-head p {
+    width: 400px;
+    font-size: 0.8rem;
+  }
+
+  .sct-one .sct-gallery {
+    flex-direction: column;
+  }
+
+  .sct-one .sct-gallery .cards {
+    width: 100%;
+    height: 500px;
+  }
+
+  .cards .card-layer h3 {
+    height: 160px;
+    font-size: 1.8rem;
+  }
+
+  /*--- Section # 2 ---*/
+
+  .sct-two .sect2-content h2 {
+    width: 380px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .sct-two .sect2-content p {
+    width: 400px;
+    font-size: 0.9rem;
+  }
+
+  /*--- Section # 3 ---*/
+
+  .sct-three h2 {
+    width: 360px;
+    font-size: 1.6rem;
+  }
+
+  .sct-three p {
+    width: 370px;
+    font-size: 0.7rem;
+  }
+
+  /*--- Section # 4 ---*/
+
+  .sct-four .imgGal2 {
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .sct-four .imgGal2 .imgCards {
+    width: 100%;
+    height: 100%;
+  }
+
+  /*--- Section # 5 ---*/
+
+  .sct-five .sct5-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .sct-five .sct5-content p {
+    width: 400px;
+    font-size: 0.6rem;
+  }
+
+  .sct-five .sct5-gallery {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*------- M A I N -------*/
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  /*-------- H E A D E R --------*/
+  .header .head-content h1 {
+    width: 280px;
+    font-size: 1.8rem;
+  }
+
+  .header .head-content p {
+    width: 280px;
+    font-size: 0.6rem;
+  }
+
+  .header .head-content .btn {
+    margin-top: 0;
+    padding: 0.7rem 1.3rem;
+    font-size: 0.6rem;
+  }
+
+  /*------- M A I N -------*/
+
+  /*--- Section # 1 ---*/
+
+  .sct-one .sct-head h2 {
+    font-size: 1.6rem;
+  }
+
+  .sct-one .sct-head p {
+    width: 300px;
+    font-size: 0.6rem;
+  }
+
+  .sct-one .sct-gallery .cards {
+    height: 380px;
+  }
+
+  .cards .card-layer h3 {
+    height: 120px;
+    font-size: 1.3rem;
+  }
+
+  /*--- Section # 2 ---*/
+
+  .sct-two .sect2-content h2 {
+    width: 260px;
+    font-size: 1.4rem;
+  }
+
+  .sct-two .sect2-content p {
+    width: 260px;
+    font-size: 0.6rem;
+  }
+
+  /*--- Section # 3 ---*/
+
+  .sct-three h2 {
+    width: 260px;
+    font-size: 1.4rem;
+  }
+
+  .sct-three p {
+    width: 270px;
+    font-size: 0.5rem;
+  }
+
+  /*--- Section # 5 ---*/
+
+  .sct-five .sct5-content h2 {
+    font-size: 1rem;
+  }
+
+  .sct-five .sct5-content p {
+    width: 300px;
+    font-size: 0.5rem;
+  }
+}
